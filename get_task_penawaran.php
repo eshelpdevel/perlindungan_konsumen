@@ -5,10 +5,6 @@
 // ini_set('memory_limit', '-1'); ditaro di file global / php.ini
 // ini_set('max_execution_time', 3000); ditaro di file global / php.ini 
 
-// ini_set('display_errors', '1');
-// ini_set('display_startup_errors', '1');
-// error_reporting(E_ALL);
-
 /* config mssql */
 // $server = '10.0.11.142';
 // $server = '10.0.89.142';
