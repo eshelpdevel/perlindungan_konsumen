@@ -17,40 +17,34 @@
 // $username = 'mitusr';  
 // $password = 'WOM@2022';
 
-$server = '10.0.88.8';
-$username = 'CRMUSR';  
-$password = 'Crm@2021';
-$con = mssql_connect($server, $username, $password);
-mssql_select_db( "WISE_STAGING", $con );
+// $server = '10.0.88.8'; ditaro di file global / php.ini 
+// $username = 'CRMUSR';  ditaro di file global / php.ini  
+// $password = 'Crm@2021'; ditaro di file global / php.ini 
+// $con = mssql_connect($server, $username, $password); ditaro di file global / php.ini 
+// mssql_select_db( "WISE_STAGING", $con ); ditaro di file global / php.ini 
 
 
 /* config mysql */ 
-$conf_ip            = "localhost";  
-$conf_user          = "es";
-$conf_passwd        = "0218Galunggung";
-$conf_db              = "db_wom";
+// $conf_ip            = "localhost"; ditaro di file global / php.ini   
+// $conf_user          = "es"; ditaro di file global / php.ini 
+// $conf_passwd        = "0218Galunggung"; ditaro di file global / php.ini 
+// $conf_db              = "db_wom"; ditaro di file global / php.ini 
 
 
-function connectDB() {
-    global $conf_ip, $conf_user, $conf_passwd, $conf_db ;   
-    if (!$connect=mysqli_connect($conf_ip, $conf_user, $conf_passwd, $conf_db)) {
+// function connectDB() { ditaro di file global / php.ini 
+    // global $conf_ip, $conf_user, $conf_passwd, $conf_db ;  ditaro di file global / php.ini   
+    // if (!$connect=mysqli_connect($conf_ip, $conf_user, $conf_passwd, $conf_db)) { ditaro di file global / php.ini 
       //$filename = __FILE__;
       //$linename = __LINE__;
      // exit();
-    }
-    return $connect;
-}
+    // } ditaro di file global / php.ini 
+    // return $connect; ditaro di file global / php.ini 
+// } ditaro di file global / php.ini 
 
 
-function disconnectDB($db_connect) {
-    $db_connect->close();
-}
-
-if ($con) {
-    
-} else {
-    
-}
+// function disconnectDB($db_connect) { ditaro di file global / php.ini 
+    // mysqli_close($db_connect); ditaro di file global / php.ini 
+// } ditaro di file global / php.ini 
 
 $dateexe = DATE("Y-m-d H:i:s");
 $dbopen  = connectDB();
