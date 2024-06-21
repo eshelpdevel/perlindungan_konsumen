@@ -1,9 +1,9 @@
 <?php 
-ini_set('post_max_size', '264M');
-ini_set('upload_max_filesize', '264M');
+// ini_set('post_max_size', '264M'); ditaro di file global / php.ini
+// ini_set('upload_max_filesize', '264M'); ditaro di file global / php.ini
 // ini_set('memory_limit', '296M');
-ini_set('memory_limit', '-1');
-ini_set('max_execution_time', 3000);
+// ini_set('memory_limit', '-1'); ditaro di file global / php.ini
+// ini_set('max_execution_time', 3000); ditaro di file global / php.ini
 
 // ini_set('display_errors', '1');
 // ini_set('display_startup_errors', '1');
@@ -43,9 +43,8 @@ function connectDB() {
 
 
 function disconnectDB($db_connect) {
-    mysqli_close($db_connect);
+    $db_connect->close();
 }
-
 
 if ($con) {
     
