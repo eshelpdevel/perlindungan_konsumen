@@ -61,8 +61,10 @@ $dbopen  = connectDB();
 //    $mss_1 = "select top 2 * from WISE_STAGING..T_MKT_POLO_ELIGIBLE
 // where IS_ACTIVE='1'";
 
-$sqlflag = "UPDATE cc_ts_penawaran_job SET is_eligible_crm=0 WHERE SOURCE_DATA = 'WISE'";
-$resflag = mysqli_query($dbopen,$sqlflag);
+// $sqlflag = "UPDATE cc_ts_penawaran_job SET is_eligible_crm=0 WHERE SOURCE_DATA = 'WISE'";
+// $resflag = mysqli_query($dbopen,$sqlflag);
+$stmt = $dbopen->prepare("UPDATE cc_ts_penawaran_job SET is_eligible_crm=0 WHERE SOURCE_DATA = 'WISE'");
+$stmt->execute();
 
 $mss_1 = "select A.* FROM WISE_STAGING..V_MKT_POLO_ELIGIBLE A WITH(NOLOCK) 
              LEFT JOIN WISE_STAGING..T_MKT_POLO_ORDER_IN B WITH(NOLOCK) ON A.AGRMNT_NO = B.AGRMNT_NO AND B.POLO_STEP IN ('TASK MVS','TASK MSS', 'TASK MSS 2', 'TASK MSS AC',
