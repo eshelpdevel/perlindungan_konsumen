@@ -34,8 +34,8 @@ $conf_db              = "db_wom";
 function connectDB() {
     global $conf_ip, $conf_user, $conf_passwd, $conf_db ;   
     if (!$connect=mysqli_connect($conf_ip, $conf_user, $conf_passwd, $conf_db)) {
-      // $filename = __FILE__;
-      // $linename = __LINE__;
+      //$filename = __FILE__;
+      //$linename = __LINE__;
      // exit();
     }
     return $connect;
