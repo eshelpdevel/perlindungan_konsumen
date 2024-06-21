@@ -1,5 +1,5 @@
 <?php 
-// ini_set('post_max_size', '264M'); ditaro di file global / php.ini
+// ini_set('post_max_size', '264M'); ditaro di file global / php.ini 
 // ini_set('upload_max_filesize', '264M'); ditaro di file global / php.ini
 // ini_set('memory_limit', '296M');
 // ini_set('memory_limit', '-1'); ditaro di file global / php.ini
